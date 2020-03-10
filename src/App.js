@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   render() {
-    
+
     const { monsters, searchField } = this.state;
     // const monsters = this.state.monsters
     const filteredMonsters = monsters.filter(monster => 
@@ -34,6 +34,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <SearchBox placeholder='search monsters' handlechange={this.handleChange} />
         <CardList monsters={filteredMonsters} />       
       </div>
